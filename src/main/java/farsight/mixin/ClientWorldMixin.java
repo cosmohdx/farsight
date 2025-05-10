@@ -30,17 +30,12 @@ public class ClientWorldMixin
 
     @Inject(method = "<init>", at = @At("RETURN"))
     public void onInit(
-      final ClientPacketListener clientPacketListener,
-      final ClientLevel.ClientLevelData clientLevelData,
-      final ResourceKey resourceKey,
-      final Holder holder,
-      final int i,
-      final int j,
-      final Supplier supplier,
-      final LevelRenderer levelRenderer,
-      final boolean bl,
-      final long l,
-      final CallbackInfo ci)
+            ClientPacketListener clientPacketListener,
+            ClientLevel.ClientLevelData clientLevelData,
+            ResourceKey resourceKey,
+            Holder holder, int i, int j,
+            LevelRenderer levelRenderer,
+            boolean bl, long l, int k, CallbackInfo ci)
     {
         chunkSource = new FarsightClientChunkManager((ClientLevel) ((Object) this));
     }
